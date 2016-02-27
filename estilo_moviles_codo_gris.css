@@ -1,0 +1,381 @@
+/*resoluciones verticales (moviles y tablets)*/
+
+@media (orientation:portrait){
+	
+
+
+body {
+	clear: both;
+	background-color: #000000;
+	text-align: left;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 0 0 0 0;
+	font: 22pt Gotham, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	color: #cccccc;
+	width: 100%;
+	max-width: 100%;
+	word-wrap:true;
+
+}
+
+.back-to-top {
+	width: auto;
+	height: auto;
+	top: 0;
+}
+
+.back-to-top img {
+	width:130px;
+	height:130px;	
+	/*src:url("images/trapeze-bar_bigbig.png");	*/
+	src:url("images/trapecista_128.png");
+}
+
+.go-to-bottom {
+	width:auto;
+	height:auto;
+}
+.go-to-bottom img {
+	width:130px;
+	height:130px;	
+	src:url("images/btnDown-1_big.png");	
+}
+
+#global_container_ {
+	clear: none;
+	float: left;
+	position: relative;
+	width: 100% ; /* 1600px / 1600px = 100% */
+	border:0;
+	margin: 0 0 0 0;
+	padding:0 0 0 0;
+	box-sizing:border-box;			
+}
+
+
+
+	
+	
+	#col {
+	clear: none;
+	margin: 0 0 0 0;
+	padding:0 0 0 0;
+	border:0;
+	position: relative;
+	width: 100% !important; /* 1600px / 1600px = 100% */
+	background-attachment: fixed;
+	background-position:  top center;
+	-webkit-background-size: 200%;
+	-moz-background-size: 200%;
+	-o-background-size:  200%;
+	background-size:  200%;
+	box-sizing:border-box;	
+	}
+
+
+	
+
+#col-2 {
+	min-height: 2088px;
+	padding: 0 0;
+	top: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+	background: rgba(0, 0, 0, 0.05);
+	box-sizing:border-box;
+	border:0;	
+
+}	
+	
+	
+	#contenedortotal {	
+	margin-left: 2%;
+	margin-right: 2%;
+	position: relative;
+	box-sizing:border-box;	
+		border:0;
+	}
+	
+	
+	
+
+/* caja contenido texto */
+#home {
+		border:0;
+	position: relative;	
+	left:0;
+	margin: -3% 0 0 5% ;
+	width: 100%;
+	height: 20%;
+	color: white;
+	box-sizing:border-box;	
+
+}
+
+
+#home p {
+	
+	display:inline-block;
+	font-size: 2em;
+}
+
+#homeTitle {
+	display:inline-block;
+	float: left;
+	font-size: 2.8em;
+	padding:0 0 0 0 ;
+
+	
+		
+}
+
+#homeTitle #titulo{
+	margin: 0 -4 0 auto ;
+	font-family: AvantGarde;
+	font-weight:500;
+	color: #00ffff;
+	font-size: 2em;
+	display:block;
+	line-height: -1em;
+	text-align:center;	
+	width:100%;
+
+}
+
+#homeTitle #desc{
+	display:block;
+	text-align:center;
+	margin:0 auto ;
+	font-size: 1em;
+	line-height:0.9em;
+	letter-spacing: 0.4em; /*0.25 em */
+	width:100%;
+}
+
+#homeDetail {
+	float: right;
+	margin: 3% 0 0;
+	position: relative;
+	width: 70%;
+	font-size: 0.8em;
+	line-height: 1.2em;
+	visibility: hidden;
+
+}
+
+#homeDetail p {
+	line-height: 1.3em;		
+}
+
+#homeDetail #mail a {
+	color: #00ffff;
+	line-height: 1.3em;		
+	text-decoration: none;
+	text-transform: none;
+}
+
+#homeDetail #facebook a {
+	font-size: 1.2em;
+	line-height: 1.3em;		
+	text-decoration: none;
+	text-transform: none;
+	color: #cccccc;
+}
+
+
+	
+
+	#homeDetail {
+	float: right;
+	margin: 0;
+	position: relative;
+	width:100%;
+	text-align:right;
+	}
+
+
+	/*cambio menu de estilo */
+	/*¿molaria poner una linea horizontal de opciones?
+	/* FORMACION  GALERIA  EXPERIENCIA  CONTACTO
+	/* ¿por ejemplo? */
+	
+	#menu {
+	width: inherit;
+	margin: 30% 0 0;
+	height: 40%;
+	position: relative;
+	line-height: 0em;
+	}
+
+#menu ul {
+	border:0;
+	width:100%;
+	
+	
+}
+
+		
+		
+	#menu li {
+	display: block;
+	text-align: center;
+	float: left;
+	width: inherit;
+	font-size: 3em;
+	font-weight: 600;	
+	font-stretch:extra-expanded;
+	}	
+	
+	#menu li.movil {
+		line-height:1em;
+		height: 1em;
+	}		
+	
+	#menu li a {
+		display:block;
+	}
+	
+	#menu .linea {
+		visibility:visible;	
+		width:100%;
+	}
+	
+	.contenido {
+	/*border: 1px solid gray;*/
+	padding:0 1%;
+	z-index: 0;
+	position: relative;	
+	margin: 2% 0 0 0;
+	background: rgba(40, 40, 40, 0.8);
+	width: 100% !important;
+	max-width:100% !important;
+	border:0;
+		word-wrap:normal;
+}
+.contenido .titulo {
+	color: #00ffff;
+	font-size: 1.30em;
+	position: relative;	
+	margin: 0px 0;	
+	text-transform: uppercase;
+	width: 100% !important;
+	max-width:100% !important;
+}
+
+.contenido .titulo h1 {
+	line-height: 2em; /*1.6 ¿?*/
+	font-weight: 400;
+	width: 100% !important;
+	max-width:100% !important;
+}
+
+.contenido .datosLargos {
+	font-weight: 300;
+	font-size: 1.6em;
+	text-align: justify;
+	line-height: 1.9em; /*1.6 ¿?*/
+	width: 100% !important;
+	max-width:100% !important;	
+		word-wrap:normal;
+}
+
+.contenido .datosLargos p {
+	word-wrap:normal;
+}
+
+
+
+
+	/* galeria */
+#galeria {
+	clear:both;
+	
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	z-index: 0;
+	position: relative;	
+	width: 100% !important;
+	max-width:100% !important;
+	border:0px;
+}
+
+	#galeria li {
+	width: 50%;
+	height:auto;
+	}
+	
+	
+#contact {
+	border:0;
+	width:100%;
+	max-width:100%;
+	font-size:0.9em;
+	font-weight:300;
+}
+
+#contact ul {
+ 
+	list-style: none;
+	width:100%;
+	max-width:100%;
+	height:100%;
+	padding: 0px;
+	border:0px;	
+
+}
+
+#contact li {
+	border: 0px;
+	display: block;
+	text-decoration: none;
+	line-height: 2em;
+	width: auto;
+}
+
+
+
+#contact a.mail {
+	text-decoration: none;	
+	color: #cccccc;
+}
+
+
+
+	
+}
+
+@media (min-width:1000px){
+		#col {
+			background: url("images/codo_gris.jpg") no-repeat center 0;background-size: 70%;
+}
+}
+
+@media (max-width:1000px) and (min-width:500px){
+	#col {
+			background: url("images/capas_fondo_1000.jpg") no-repeat center 0;
+}
+}
+
+@media (max-width:500px) and (min-width:350px){
+	#col {
+			background: url("images/capas_fondo_500.jpg") no-repeat center 0;
+}
+
+
+
+}
+
+
+@media (max-width:350px) {
+	#col {
+			background: url("images/capas_fondo_350.jpg") no-repeat center 0;
+}
+
+
+
+}
+

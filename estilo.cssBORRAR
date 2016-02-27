@@ -1,0 +1,752 @@
+﻿@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Black.eot'); 
+  src: url('fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-Black.otf') format('opentype'),
+     url('fonts/Gotham-Black.woff') format('woff'), 
+     url('fonts/Gotham-Black.ttf')  format('truetype'), 
+     url('fonts/Gotham-Black.svg#svgFontName') format('svg'); 
+   font-weight: 900;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Ultra.eot'); 
+  src: url('fonts/Gotham-Ultra.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-Ultra.otf') format('opentype'),
+     url('fonts/Gotham-Ultra.woff') format('woff'), 
+     url('fonts/Gotham-Ultra.ttf')  format('truetype'), 
+     url('fonts/Gotham-Ultra.svg#svgFontName') format('svg'); 
+   font-weight: 800;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Bold.eot'); 
+  src: url('fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-Bold.otf') format('opentype'),
+     url('fonts/Gotham-Bold.woff') format('woff'), 
+     url('fonts/Gotham-Bold.ttf')  format('truetype'), 
+     url('fonts/Gotham-Bold.svg#svgFontName') format('svg'); 
+   font-weight: 700;
+   font-style: normal;
+ }
+
+/*@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Demi.eot'); 
+  src: url('fonts/Gotham-Demi.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-Demi.otf') format('opentype'),
+     url('fonts/Gotham-Demi.woff') format('woff'), 
+     url('fonts/Gotham-Demi.ttf')  format('truetype'), 
+     url('fonts/Gotham-Demi.svg#svgFontName') format('svg'); 
+   font-weight: 600;
+   font-style: normal;
+ }
+*/
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Medium.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-Medium.otf') format('opentype'),
+     url('fonts/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 500;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-MediumItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-MediumItalic.otf') format('opentype'),
+     url('fonts/Gotham-MediumItalic.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-MediumItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-MediumItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 500;
+   font-style: italic;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-Book.otf') format('opentype'),
+     url('fonts/Gotham-Book.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-BookItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-BookItalic.otf') format('opentype'),
+     url('fonts/Gotham-BookItalic.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-BookItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-BookItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 400;
+   font-style: italic;
+ } 
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-Light.otf') format('opentype'),
+     url('fonts/Gotham-Light.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 300;
+   font-style: normal;
+ }
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-LightItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-LightItalic.otf') format('opentype'),
+     url('fonts/Gotham-LightItalic.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-LightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-LightItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 300;
+   font-style: italic;
+ }
+ 
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-XLight.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-XLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-XLight.otf') format('opentype'),
+     url('fonts/Gotham-XLight.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-XLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-XLight.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 200;
+   font-style: normal;
+ }
+ 
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-XLightItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-XLightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/Gotham-XLightItalic.otf') format('opentype'),
+     url('fonts/Gotham-XLightItalic.woff') format('woff'), /* Modern Browsers */
+     url('fonts/Gotham-XLightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('fonts/Gotham-XLightItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 200;
+   font-style: italic;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Thin.eot');
+  src: url('fonts/Gotham-Thin.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-Thin.otf') format('opentype'),
+     url('fonts/Gotham-Thin.woff') format('woff'), 
+     url('fonts/Gotham-Thin.ttf')  format('truetype'), 
+     url('fonts/Gotham-Thin.svg#svgFontName') format('svg'); 
+   font-weight: 100;
+   font-style:normal;
+ }
+ 
+ @font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-ThinItalic.eot');
+  src: url('fonts/Gotham-ThinItalic.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-ThinItalic.otf') format('opentype'),
+     url('fonts/Gotham-ThinItalic.woff') format('woff'), 
+     url('fonts/Gotham-ThinItalic.ttf')  format('truetype'), 
+     url('fonts/Gotham-ThinItalic.svg#svgFontName') format('svg'); 
+   font-weight: 100;
+   font-style:italic;
+ }
+ 
+ 
+@font-face {
+    font-family: 'AvantGarde';
+	src:url('fonts/avantgarde-demi.eot'),
+		url('fonts/avantgarde-demi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/avantgarde-demi.otf') format('opentype'),		
+        url('fonts/avantgarde-demi.woff') format('woff'),
+        url('fonts/avantgarde-demi.ttf') format('truetype'),
+        url('fonts/avantgarde-demi.svg#icomoonregular') format('svg');
+   font-weight: 700;
+   font-style:normal;			
+}
+
+@font-face {
+    font-family: 'AvantGarde';
+	src:url('fonts/Avant-GardeBook-Regular.eot'),
+		url('fonts/Avant-GardeBook-Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Avant-GardeBook-Regular.otf') format('opentype'),		
+        url('fonts/Avant-GardeBook-Regular.woff') format('woff'),
+        url('fonts/Avant-GardeBook-Regular.ttf') format('truetype'),
+        url('fonts/Avant-GardeBook-Regular.svg#icomoonregular') format('svg');	
+   font-weight: 400;
+   font-style:normal;		
+}
+
+
+img, embed, object, video {
+	max-width: 100%;
+}
+
+.imgboton { /* alineo verticalmente los botones de facebook y linkedin con el texto que le acompañen */
+	vertical-align:middle;
+}
+
+body {
+	background-color: #000000;
+	text-align: left;
+	margin: 0px;
+	font: 16pt Gotham, Arial, Helvetica, sans-serif;
+	font-weight:300;
+	color: #cccccc;
+}
+
+#global_container_ {
+	float: none;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	width: 100%; /* 1600px / 1600px = 100% */
+	/*background: url(images/background.jpg) no-repeat center 0; esta imagen no la entiendo, no se ve! */
+	background-position: left top;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+}
+
+#col {
+	padding: 2% 0 15%;
+	position: relative;
+	width: 100%; /* 1600px / 1600px = 100% */
+	background: url(images/capas_fondo.png) no-repeat center 0;
+	
+	background-position: left top;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	
+	box-sizing:border-box;
+}
+
+#col-2 {
+
+	min-height: 2088px;
+	padding: 2% 0;
+	top: 0;
+	margin-left: 13%;
+	margin-right: 13%;
+
+	background: rgba(0, 0, 0, 0.5);
+	box-sizing:border-box;	
+
+}
+
+
+/* definicion de secciones para los anclas y el evento "Go" del menu */
+
+section {
+	display: block;
+	border: 1px solid transparent;
+	clear: both;
+}
+
+section#home {
+	min-height:	100vh;
+}
+
+section#education {
+	min-height:	100vh;
+}
+section#gallery {
+	min-height:	 100vh;
+}
+
+section#experience {
+	min-height:	 100vh;
+}
+
+section#contact {
+	min-height:	 100vh;
+}
+
+#contenedortotal {
+	margin-left: 4%;
+	margin-right: 4%;
+	position: relative;
+
+}
+
+/* caja contenido texto */
+#home {
+	position: relative;	
+	top: 2%;
+	margin: 0px auto;
+	width: 100%;
+	height: 85%;
+	color: white;
+}
+
+
+#home p {
+	font-size: 1.6em;
+}
+
+#homeTitle {
+	float: left;	
+}
+
+#homeTitle #titulo{
+	font-family: AvantGarde;
+	font-weight:100;
+	color: #00ffff;
+	font-size: 50px;
+	line-height: 0px;
+}
+
+#homeTitle #desc{
+	font-size: 20px;
+	line-height: 0px;
+	letter-spacing: 5px; /*0.25 em */
+}
+
+#homeDetail {
+	float: right;
+	margin: 3% 0 0;
+	position: relative;
+	width:200px;
+	font-size: 9px;
+	line-height: 15px;	
+
+}
+
+#homeDetail p {
+	line-height: 15px;		
+}
+
+#homeDetail #mail a {
+	color: #00ffff;
+	line-height: 15px;		
+	text-decoration: none;
+	text-transform: none;
+}
+
+#homeDetail #facebook a {
+	font-size: 14px;
+	line-height: 15px;		
+	text-decoration: none;
+	text-transform: none;
+	color: #cccccc;
+}
+
+#menu {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 80px;
+	margin-top: 50%;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	float: right;
+	position: relative;
+	width: 200px;
+}
+
+#menu ul {
+	display: block;
+	color: #00ffff;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 0%;
+}
+
+#menu li {
+	width: 100%;
+}
+#menu a:link,a:visited {
+	color: #cccccc;
+	padding: 80% 0 80% 3%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#menu a:hover,a:active {
+	/*intercambio los colores al poner el cursor encima */
+	color: #00ffff;
+}
+
+#aboutMe {
+	visibility:hidden;
+	font-size: 10px;
+	font-style:italic;
+	text-align: center;
+	float:left;
+	position: relative;
+}
+
+#aboutMe p {
+	padding:27% 0 0;
+		
+}
+
+.contenido {
+	/*border: 1px solid gray;*/
+	z-index: 0;
+	position: relative;	
+	margin: 8% auto -7px;
+}
+
+
+.contenido .titulo {
+	color: #00ffff;
+	font-size: 17px;
+	
+
+	position: relative;
+	width: auto;
+	margin: 0px auto;
+	line-height: 1.9em; /*1.6 ¿?*/
+	text-transform: uppercase;
+}
+
+.contenido .titulo h1 {
+	line-height: 40px;
+	font-weight: 400;
+}
+
+.contenido .datosLargos {
+	font-weight: 200;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.9em; /*1.6 ¿?*/
+}
+
+
+.contenido .sinEstilo{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*/*ultimo cambio hecho para dar interlineado en las listas, no se que tal 
+
+.contenido .sinEstilo li {
+		padding: 0.4em 0; 
+}
+*/
+
+
+.contenido .resaltado {	
+	color: #00ffff;
+}
+
+.contenido p {	
+	font-size: 1.1em;
+}
+
+.contenido b {	
+	color: #00ffff;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.contenido a {
+	text-decoration: none;	
+	color: #00ffff;
+}
+
+.contenido a .a2 {
+	text-decoration: none;	
+	color: #cccccc;
+}
+
+/* galeria */
+#galeria {
+	margin: 0 -23.5%;
+	z-index: 0;
+	position: relative;	
+	/*width: cover;	*/
+	border:0px;
+}
+
+#galeria ul {
+	list-style: none;
+	list-style-type: none;
+	width:100%;
+	height:100%;
+	padding: 0px;
+	border:0px;
+	line-height: 0px;
+}
+
+#galeria li {
+    line-height: 0px;
+	border:0px;
+	display: inline;
+	text-decoration: none;
+	float: left;
+	width: 33.3%;
+	height: 33%;
+}
+
+#galeria li .icono {
+	width: 100%;
+	height: 100%;
+}
+
+#contacto {
+	display:inline-block;
+	width:100%;
+}
+
+#contacto .cajitas {
+		width:auto;
+		float:left;
+		padding:0 1px;
+}
+
+#contacto a.mail {
+	text-decoration: none;	
+	color: #cccccc;
+}
+
+
+/* boton volver arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+	opacity: 0.50;
+    /*    background-color: rgba(235, 235, 235, 0.80);*/
+    padding: 1em;
+    display: none;
+}
+
+
+.back-to-top:hover {    
+    opacity: 0.90;
+}
+
+footer {
+	text-align:center;	
+	color: #111111;
+}
+
+footer a {
+	text-decoration: none;	
+	color: #111111;
+}
+
+
+/*resoluciones verticales (moviles y tablets)*/
+@media (orientation:portrait){
+	
+
+
+/* pongo galeria en version de dos columnas */
+	#galeria li {
+	width: 50%;
+	height:auto;
+	}
+	
+	/*reduzco margenes laterales */
+	#col-2 {
+	margin-left: 2%;
+	margin-right: 2%;
+	}
+	
+	#contenedortotal {	
+	margin-left: 2%;
+	margin-right: 2%;
+	position: relative;
+	}
+
+	#homeDetail {
+	float: right;
+	margin: 0;
+	position: relative;
+	width:100%;
+	text-align:right;
+	}
+
+
+	/*cambio menu de estilo */
+	/*¿molaria poner una linea horizontal de opciones?
+	/* FORMACION  GALERIA  EXPERIENCIA  CONTACTO
+	/* ¿por ejemplo? */
+	
+	#menu {
+	margin: 0 0 15% 0;
+	float: left;
+	position: relative;
+	width:100%;
+	text-align:center;
+	}
+	
+	#menu li {
+	display: inline-block;
+	text-decoration: none;
+	float: left;
+	width: 50%;
+
+
+	}	
+}
+
+
+/*
+@media (max-width:1200px) and (min-width:800px){
+		
+	.col-2 {
+	margin-left: 6%;
+	margin-right: 6%;
+	}
+
+}
+*/
+
+/* resoluciones bajas (moviles) */
+/* necesario reducir tamaño fuentes */
+
+@media (max-width:700px){
+	
+	#col {	
+	background: url(images/capas_fondo@0,5x.png) no-repeat center 0;			
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
+	
+	#col-2 {		
+	margin-left: 1%;
+	margin-right: 1%;
+	}
+	
+	#home p {
+		font-size: 1.6em;
+	}
+
+	#homeTitle #titulo{
+	font-size: 35px;
+	line-height: 0px;
+	}
+
+	#homeTitle #desc{
+	font-size: 11px;
+	/*line-height: 0px;
+	letter-spacing: 4px;*/
+	}
+
+
+	#homeDetail {
+	float: right;
+	margin: 3% 0 0;
+	position: relative;
+	width:200px;
+	
+	font-family: Gotham;
+	font-size: 10px;
+	line-height: 15px;	
+	}
+
+	#homeDetail p {
+	/*color: #d2d2d2;*/
+	font-size: 10px;
+	line-height: 15px;		
+}
+
+	#homeDetail #mail a {
+	/*color: #00ffff;*/
+	font-size: 10px;
+	line-height: 15px;		
+	/*text-decoration: none;
+	text-transform: none;*/
+}
+
+	#homeDetail #facebook a {
+	font-size: 10px;
+	line-height: 15px;		
+	/*color: #d2d2d2;
+	text-decoration: none;
+	text-transform: none;*/
+}
+
+	#menu {
+	/*font-family: Gotham;*/
+	font-size: 14px;
+	line-height: 85px;
+	
+	margin: 60% 0 0 0;
+	float: right;
+	position: relative;
+}
+
+
+	.contenido .titulo {
+	/*font-family: Gotham;
+	color: #00ffff;*/
+	font-size: 15px;
+	/*font-weight: 200;
+
+	position: relative;
+	width: auto;
+	margin: 0px auto;
+	line-height: 1.6;
+	text-transform: uppercase;*/
+}
+
+	.contenido .datosLargos {
+	font-size: 14px;
+	/*text-align: justify;
+	line-height: 1.6;*/
+	}
+
+	.contenido p {	
+	font-size: 1.1em;
+	}
+
+	.contenido b {	
+	color: #00ffff;
+	text-decoration: none;
+	font-size: 1em;
+	}
+
+	/* pongo galeria en version de dos columnas  */
+	#galeria li {
+	width: 50%;
+	height:auto;
+	}
+	
+/* boton volver arriba */
+.back-to-top {
+    position: fixed;
+    right: 0px;
+	opacity: 0.50;
+    background-color: rgba(0, 0, 0, 0.80);
+    bottom: 2em;	
+    padding: 1em;
+    display: none;
+}
+
+/* boton volver arriba */
+.back-to-top img {
+	src: url(images/trapeze-bar_small.png);
+}
+	
+	
+
+}

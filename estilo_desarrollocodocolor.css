@@ -1,0 +1,793 @@
+﻿/****************  HOJA DE ESTILOS
+
+	INDICE (el numero al lado del titulo es el numero de linea donde empieza esa seccion)
+	
+	
+	57. IMPORTACION DE LAS TIPOGRAFIAS
+	
+	///DEFINICION DEL ESTILO GENERAL ///
+	
+	262. BODY Y CONTENEDORES PRINCIPALES: 3 CAJAS, UNA DENTRO DE LA OTRA
+		GLOBAL_CONTAINER
+		COL
+		COL-2
+		
+	316. DEFINICION DE LOS ANCLAS DE LA PAGINA, SIRVE PARA LLEVAR A ARRIBA O ABAJO AL PULSAR EN EL MENU
+	341. CONTENEDOR_TOTAL ES UNA CAJA GENERAL, CON ELLA ME ASEGURO QUE LA PAGINA CUMPLE UNOS MARGENES
+	
+	349. HOME, ES UNA CAJA PARA CONTENER TODO LO DE LA PRIMERA PAGINA. SE COMPONE DE DOS CAJAS, TITLE Y DETAIL
+		TITLE ES EL TITULO, LUIS VALLE CIRCUS ARTIST
+		DETAIL ES LA CAJA DE LA IZQUIERDA QUE CONTENIA (ANTES) LOS DATOS DE CONTACTO Y SE ALINEABA CON EL MENU
+		
+	410. MENU, AUNQUE PAREZCAN BOTONES, ESTO REALMENTE ES UNA LISTA FORMADA POR HIPERVINCULOS (FORMATEADOS A BONITO)
+	
+	443. ABOUTME ES UNA CAJA DONDE ESCRIBIR UN BREVE TEXTO INTRODUCTORIO A LA PAGINA PRINCIPAL
+	
+	456. CONTENIDO ES LA CAJA QUE CONTIENE TODO EL TEXTO, LLEVA:
+		TITULO, DATOSLARGOS, LISTA SIN ESTILO PARA ENUMERAR, Y FORMATEOS DE TEXTO
+		
+	529. GALERIA, CAJA QUE CONTIENE LA GALERIA DE IMAGENES. ES UNA LISTA CON LOS ITEMS FORMATEADOS A BLOQUES
+		CADA ITEM DE LA LISTA ES UNA IMAGEN CON UN LINK
+		
+	567. CONTACTO, LA CAJA QUE CONTIENE NOMBRE TELEFONO MAIL FACEBOOK Y LINKEDIN.
+		CADA ELEMENTO VA DENTRO DE UNA CAJITA PROPIA, PARA NO PERDER FORMATO
+		
+		
+	582. BACKTOTOP. BOTON QUE APARECE CUANDO EL SCROLL ESTA DESPLAZADO Y QUE AL PULSARSE LLEVA AL INICIO DE LA WEB
+	
+	596. FOOTER. PARTE PARA PONER EL COPYRIGTH DE LA WEB
+	@MEDIA
+	A PARTIR DE ESTE PUNTO, SE VUELVEN A REPETIR DEFINICIONES DE ESTILOS PERO CON PEQUEÑOS CAMBIOS. ES LA PARTE DE FUNCIONAMIENTO RESPONSIVO. LA WEB SE VISUALIZARA DE UNA FORMA U OTRA SEGUN MODIFICADORES CUANDO SE CUMPLAN CONDICIONES. LOS MODIFICADORES SE SUMAN AL ESTILO GENERAL DE LA PRIMERA PARTE. NO ES EXCLUYENTE DE EL RESTO DE MODIFICADORES, QUIERO DECIR CON ESTO, QUE SI SE CUMPLEN VARIAS CONDICIONES EL RESTULADO SERA INCIERTO PUES PASARA POR DISTINTAS MODIFICACIONES. POR EJEMPLO: UN MOVIL PUEDE PASAR POR CONDICION DE DISPOSITIVO PEQUEÑO, Y POR OTRA DE PANTALLA VERTICAL, MEZCLANDO LOS DOS MODIFICADORES QUE LLEVEN.
+	
+
+	EN PRINCIPIO LAS CONDICIONES QUE CONTEMPLO SON:
+		609. PANTALLA PORTRAIT 
+			DESPLAZO IMAGEN FONDO PARA QUE QUEDE MEJOR
+			TENDRE QUE CAMBIAR FORMATO HOME Y MENU
+			GALERIA EN VEZ DE MOSTRAR IMAGENES DE 3 EN 3 (33.3%) QUE LAS MUESTRE DE 2 EN 2 (50%)
+		
+		678. MEDIO CON RESOLUCION INFERIOR A 700PX (ESTA RESOLUCION SOLO PUEDE SER UN MOVIL)
+			TENDRE QUE INCREMENTAR LAS FUENTES
+			REDUCIR MARGENES CASI DEL TODO
+			REDUCIR EL TAMAÑO DEL BOTON DE DESPLAZAMIENTO
+	
+		estoy valorando que sean excluyentes
+	**/
+
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Black.eot'); 
+  src: url('fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'), 
+url('fonts/Gotham-Black.otf') format('opentype'),
+url('fonts/Gotham-Black.woff') format('woff'), 
+url('fonts/Gotham-Black.ttf') format('truetype'), 
+url('fonts/Gotham-Black.svg#svgFontName') format('svg'); 
+   font-weight: 900;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Ultra.eot'); 
+  src: url('fonts/Gotham-Ultra.eot?#iefix') format('embedded-opentype'), 
+url('fonts/Gotham-Ultra.otf') format('opentype'),
+url('fonts/Gotham-Ultra.woff') format('woff'), 
+url('fonts/Gotham-Ultra.ttf') format('truetype'), 
+url('fonts/Gotham-Ultra.svg#svgFontName') format('svg'); 
+   font-weight: 800;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Bold.eot'); 
+  src: url('fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'), 
+url('fonts/Gotham-Bold.otf') format('opentype'),
+url('fonts/Gotham-Bold.woff') format('woff'), 
+url('fonts/Gotham-Bold.ttf') format('truetype'), 
+url('fonts/Gotham-Bold.svg#svgFontName') format('svg'); 
+   font-weight: 700;
+   font-style: normal;
+ }
+
+/*@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Demi.eot'); 
+  src: url('fonts/Gotham-Demi.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/Gotham-Demi.otf') format('opentype'),
+     url('fonts/Gotham-Demi.woff') format('woff'), 
+     url('fonts/Gotham-Demi.ttf')  format('truetype'), 
+     url('fonts/Gotham-Demi.svg#svgFontName') format('svg'); 
+   font-weight: 600;
+   font-style: normal;
+ }
+*/
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Medium.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-Medium.otf') format('opentype'),
+url('fonts/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 500;
+   font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-MediumItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-MediumItalic.otf') format('opentype'),
+url('fonts/Gotham-MediumItalic.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-MediumItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-MediumItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 500;
+   font-style: italic;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-Book.otf') format('opentype'),
+url('fonts/Gotham-Book.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-BookItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-BookItalic.otf') format('opentype'),
+url('fonts/Gotham-BookItalic.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-BookItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-BookItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 400;
+   font-style: italic;
+ } 
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-Light.otf') format('opentype'),
+url('fonts/Gotham-Light.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 300;
+   font-style: normal;
+ }
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-LightItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-LightItalic.otf') format('opentype'),
+url('fonts/Gotham-LightItalic.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-LightItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-LightItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 300;
+   font-style: italic;
+ }
+ 
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-XLight.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-XLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-XLight.otf') format('opentype'),
+url('fonts/Gotham-XLight.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-XLight.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-XLight.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 200;
+   font-style: normal;
+ }
+ 
+ 
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-XLightItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Gotham-XLightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('fonts/Gotham-XLightItalic.otf') format('opentype'),
+url('fonts/Gotham-XLightItalic.woff') format('woff'), /* Modern Browsers */
+url('fonts/Gotham-XLightItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+url('fonts/Gotham-XLightItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: 200;
+   font-style: italic;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-Thin.eot');
+  src: url('fonts/Gotham-Thin.eot?#iefix') format('embedded-opentype'), 
+url('fonts/Gotham-Thin.otf') format('opentype'),
+url('fonts/Gotham-Thin.woff') format('woff'), 
+url('fonts/Gotham-Thin.ttf') format('truetype'), 
+url('fonts/Gotham-Thin.svg#svgFontName') format('svg'); 
+   font-weight: 100;
+   font-style:normal;
+ }
+ 
+ @font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham-ThinItalic.eot');
+  src: url('fonts/Gotham-ThinItalic.eot?#iefix') format('embedded-opentype'), 
+url('fonts/Gotham-ThinItalic.otf') format('opentype'),
+url('fonts/Gotham-ThinItalic.woff') format('woff'), 
+url('fonts/Gotham-ThinItalic.ttf') format('truetype'), 
+url('fonts/Gotham-ThinItalic.svg#svgFontName') format('svg'); 
+   font-weight: 100;
+   font-style:italic;
+ }
+ 
+ 
+@font-face {
+    font-family: 'AvantGarde';
+	src:url('fonts/avantgarde-demi.eot') ,
+url('fonts/avantgarde-demi.eot?#iefix') format('embedded-opentype'),
+url('fonts/avantgarde-demi.otf') format('opentype'),		
+url('fonts/avantgarde-demi.woff') format('woff'),
+url('fonts/avantgarde-demi.ttf') format('truetype'),
+url('fonts/avantgarde-demi.svg#icomoonregular') format('svg');
+   font-weight: 700;
+   font-style:normal;			
+}
+
+@font-face {
+    font-family: 'AvantGarde';
+	src:url('fonts/Avant-GardeBook-Regular.eot') ,
+url('fonts/Avant-GardeBook-Regular.eot?#iefix') format('embedded-opentype'),
+url('fonts/Avant-GardeBook-Regular.otf') format('opentype'),		
+url('fonts/Avant-GardeBook-Regular.woff') format('woff'),
+url('fonts/Avant-GardeBook-Regular.ttf') format('truetype'),
+url('fonts/Avant-GardeBook-Regular.svg#icomoonregular') format('svg');	
+   font-weight: 400;
+   font-style:normal;		
+}
+
+
+img, embed, object, video {
+	max-width: 100%;
+}
+
+/*esta clase sirve para alinear verticalmente los botones de facebook y linkedin con el texto que le acompañen */
+.imgboton { 
+	vertical-align:middle;
+}
+
+body {
+	border:0;
+	background-color: #000000;
+	text-align: left;
+	margin: 0px;
+	font: 14pt Gotham, Arial, Helvetica, sans-serif;
+	font-weight:300;
+	color: #dddddd;
+	width:100%;
+	max-width:100%;
+}
+
+#global_container_ {
+		border:0;
+	float: none;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	width: 100%; /* 1600px / 1600px = 100% */
+	
+}
+
+#col {
+		border:0;
+	padding: 2% 0 15%;
+	position: relative;
+	width: 100%; /* 1600px / 1600px = 100% */
+	background: url(images/codo_color.jpg) no-repeat center 0;
+	
+	background-position: left top;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	
+	box-sizing:border-box;
+}
+
+#col-2 {
+		border:0;
+	min-height: 2088px;
+	padding: 2% 0;
+	top: 0;
+	margin-left: 13%;
+	margin-right: 13%;
+	background: rgba(0, 0, 0, 0.5);
+	box-sizing:border-box;	
+
+}
+
+
+/* definicion de secciones para los anclas y el evento "Go" del menu */
+
+section {
+
+	display: block;
+	border: 1px solid transparent;
+	clear: both;
+}
+
+section .section {
+
+}
+
+section#home {
+	min-height:	100vh;
+}
+
+section#biography {
+	min-height:	100vh;
+}
+section#gigs {
+	min-height:	 100vh;
+}
+
+section#gallery {
+	min-height:	 100vh;
+}
+
+section#contact {
+	min-height:	 50vh;
+}
+
+#contenedortotal {
+	border:0;
+	margin-left: 4%;
+	margin-right: 4%;
+	position: relative;
+
+}
+
+/* caja contenido texto */
+#home {
+	border:0;
+	position: relative;	
+	top: 2%;
+	margin: 0px auto;
+	width: 100%;
+	height: 85%;
+	color: white;
+}
+
+
+#home p {
+	font-size: 1.6em;
+}
+
+#homeTitle {
+	border:0;
+	float: left;	
+}
+
+#homeTitle #titulo{
+	font-family: AvantGarde;
+	font-weight:100;
+	color: #00ffff;
+	font-size: 50px;
+	line-height: 0px;
+}
+
+#homeTitle #desc{
+	font-size: 20px;
+	line-height: 0px;
+	letter-spacing: 5px; /*0.25 em */
+}
+
+#homeDetail {
+	border:0;
+	float: right;
+	margin: 3% 0 0;
+	position: relative;
+	width: 200px;
+	font-size: 9px;
+	line-height: 15px;
+	visibility: hidden;
+
+}
+
+#homeDetail p {
+	line-height: 15px;		
+}
+
+#homeDetail #mail a {
+	color: #00ffff;
+	line-height: 15px;		
+	text-decoration: none;
+	text-transform: none;
+}
+
+#homeDetail #facebook a {
+	font-size: 14px;
+	line-height: 15px;		
+	text-decoration: none;
+	text-transform: none;
+	color: #cccccc;
+}
+
+
+
+#menu {
+	border:0;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 80px;
+	margin-right: -50px;
+	margin-left: -50px;
+	position: relative;
+	width: 100%;
+	float: left;
+	visibility: visible;
+}
+
+/*esto es una ñapa para la parte movil y aqui no se tiene que ver*/
+#menu .linea {
+	visibility:hidden;}
+	
+
+#menu ul {
+	border:0;
+	display: block;
+	color: #00ffff;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#menu li {
+	border:0;
+	width: 100%;
+}
+
+/*esto es una ñapa para la parte movil y aqui no se tiene que ver*/
+#menu li.espacio {
+	visibility:hidden;}
+	
+	
+#menu a:link,a:visited {
+	color: #dddddd;
+	padding-right: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#menu a:hover,a:active {
+	/*intercambio los colores al poner el cursor encima */
+	color: #00ffff;
+}
+
+.contenido {
+	border:0;
+	z-index: 0;
+	position: relative;	
+	margin: 8% auto -7px;
+}
+
+
+.contenido .titulo {
+	border:0;
+	color: #00ffff;
+	font-size: 1.1em;
+	
+
+	position: relative;
+	width: auto;
+	margin: 0px auto;
+	line-height: 1.9em; /*1.6 ¿?*/
+	text-transform: uppercase;
+}
+
+.contenido .titulo h1 {
+	line-height:  2em;
+	font-weight: 400;
+}
+
+.contenido .datosLargos {
+	border:0;
+	font-weight: 200;
+	font-size: 1em;
+	text-align: justify;
+	line-height: 1.9em; /*1.6 ¿?*/
+}
+
+
+.contenido .sinEstilo{
+		border:0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*/*ultimo cambio hecho para dar interlineado en las listas, no se que tal 
+
+.contenido .sinEstilo li {
+		padding: 0.4em 0; 
+}
+*/
+
+
+.contenido .resaltado {	
+	color: #00ffff;
+}
+
+.contenido p {	
+	font-size: 1.1em;
+}
+
+.contenido b {	
+	color: #00ffff;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.contenido a {
+	text-decoration: none;	
+	color: #00ffff;
+}
+
+.contenido a .a2 {
+	text-decoration: none;	
+	color: #dddddd;
+}
+
+
+/*Columna disciplina/imagen*/
+	.disciplina {
+	-webkit-columns: 2 200px; /* Chrome, Safari, Opera */
+    -moz-columns: 2 200px; /* Firefox */
+    columns: 2 200px;
+	
+	
+	-webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+
+	  -webkit-column-rule: 1px dotted #ddd;
+     -moz-column-rule: 1px dotted #ddd;
+          column-rule: 1px dotted #ddd;
+	/* 
+	-webkit-column-width: 100px; 
+	-moz-column-width: 100px;
+    column-width: 100px;
+	*/
+}
+
+.disciplina .imagen{
+	overflow:hidden	
+}
+
+.disciplina img {
+	float:right;	
+	display:block;
+
+	/*margin:0 auto 0 auto;*/
+	
+}
+.disciplina .nombre {
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+	-moz-column-span:all;
+    column-span: all;
+}
+
+
+/* galeria */
+#galeria {
+	margin: 0 -23.5%;
+	z-index: 0;
+	position: relative;	
+	/*width: cover;	*/
+	border:0px;
+}
+
+#galeria ul {
+	list-style: none;
+	list-style-type: none;
+	width:100%;
+	height:100%;
+	padding: 0px;
+	border:0px;
+	line-height: 0px;
+}
+
+#galeria li {
+    line-height: 0px;
+	border:0px;
+	display: inline;
+	text-decoration: none;
+	float: left;
+
+	width: 33.3%;
+	height: 33%;
+}
+
+.imgcontenedor {
+	width:100%;
+	height: 100%;
+/*	width: 33.3%;
+	height: 33%;*/
+	
+	overflow:hidden;
+}
+
+
+
+
+
+.videocontenedor        {position:relative;}
+.videocontenedor .ratio {display:block;width:100%;height:auto;}
+.videocontenedor iframe {
+position:absolute;top:0;left:0;width:100%; height:100%;
+}
+
+
+.imgcontenedor img {
+-webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+width:100%;
+}
+
+.imgcontenedor:hover img {
+-webkit-transform:scale(1.15);
+-moz-transform:scale(1.15);
+-ms-transform:scale(1.15);
+-o-transform:scale(1.15);
+transform:scale(1.15);
+}
+
+
+
+
+
+#contact {
+		
+	border:0;	
+	width:100%;
+	max-width:100%;
+}
+
+#contact .tabla {
+	display:block;
+	height:10%;
+
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+	
+
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+	
+	-webkit-column-width: 40%; /* Chrome, Safari, Opera */
+    column-width: 40%;
+}
+#contact ul {
+	list-style: none;
+	width:100%;
+	height:100%;
+	padding: 0px;
+	border:0px;
+}
+
+#contact li {
+	border: 0px;
+	display: block;
+	text-decoration: none;
+	line-height: 2em;
+	font-size:1em;
+	
+	letter-spacing:0.2em;
+	width: 33%;/*48*/
+}
+
+#contact a.mail {
+	text-decoration: none;	
+	color: #cccccc;
+}
+
+/* capa del boton volver arriba, con forma de trapecio colgando */
+
+/* boton volver arriba */
+.back-to-top {
+	border:0;
+	position: fixed;
+	right: 0;
+	opacity: 0.75;
+	display: none;
+	width: 8%;
+	height: auto;
+	z-index: 10;
+}
+
+.back-to-top:hover {    
+    opacity: 0.90;
+}
+
+
+/*boton de avanzar a la siguiente seccion*/
+.go-to-bottom {
+	border:0;
+	position: fixed;
+	opacity: 0.75;
+	display: none;
+	width: 8%;
+	height:auto;
+	z-index:10;
+	right: 0;
+	bottom:0;
+}
+
+.go-to-bottom:hover {    
+    opacity: 0.90;
+}
+
+
+
+footer {
+		border:0;
+	text-align:center;	
+	color: #333333;
+}
+
+footer a {
+	text-decoration: none;	
+	color: #333333;
+}
+
+
+/*pruebas*/
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper object,
+.videoWrapper embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#video_background { 
+	position: relative; 
+	bottom: 0px; 
+	right: 0px; 
+	min-width: 100%; 
+	min-height: 100%; 
+	width: auto; 
+	height: auto; 
+	z-index: -1000; 
+	overflow: hidden;
+}
+#video_pattern { 
+	background:#fff; 
+	position: fixed; 
+	opacity: 0.8; 
+	left: 0px; 
+	top: 0px; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 1; 
+}
+
+#galleria{height:467px}
